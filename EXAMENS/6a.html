@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 6</title>
+    <script>
+        // Exercice 6a
+        let heure = new Date().getHours(); // Récupère l'heure actuelle
+
+        // Exercice 6b
+        // Changez la valeur de la variable "heure" pour tester différents scénarios
+        heure = 8; // Par exemple, changez cette valeur pour tester différents messages
+
+        // Exercice 6c
+        let nom = "VotreNom"; // Remplacez "VotreNom" par votre propre nom
+
+        // Affiche un message en fonction de l'heure
+        if (heure >= 6 && heure < 12) {
+            document.write(`Bonjour ${nom} !`);
+        } else if (heure >= 13 && heure < 17) {
+            document.write(`Bon après-midi ${nom} !`);
+        } else {
+            document.write(`Bonne nuit ${nom} !`);
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <button onclick="console.log(`Quantite panier:${quantityPanier}`)" >show quantity</button><br>
+  <button onclick="addToCart(1)">add to cart</button><br>
+  <button onclick="addToCart(2)">+2</button><br>
+  <button onclick="addToCart(3)">+3</button><br>
+  <button onclick="removeFromCart(1)">remove from cart</button><br>
+  <button onclick="removeFromCart(2)">-2</button><br>
+  <button onclick="removeFromCart(3)">-3</button><br>
+  <button onclick="resetCart()">reset cart</button>
+
+
+    <script>
+        let quantityPanier = 0;
+
+        function addToCart(amount) {
+            if (quantityPanier + amount > 10) {
+                alert("Le panier est plein");
+            } else {
+                quantityPanier += amount;
+                console.log(`Quantite panier:${quantityPanier}`);
+            }
+        }
+
+        function removeFromCart(amount) {
+            if (quantityPanier - amount < 0) {
+                alert("Pas assez d'articles dans le panier");
+            } else {
+                quantityPanier -= amount;
+                console.log(`Quantite panier:${quantityPanier}`);
+            }
+        }
+
+        function resetCart() {
+            quantityPanier = 0;
+            console.log(`Quantite panier:${quantityPanier}`);
+        }
+    </script>
+
+</body>
+</html>
